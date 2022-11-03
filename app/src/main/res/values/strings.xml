@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Flitig</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="important_todo">Important todo</string>
+    <string name="todo_name">Todo name</string>
+    <string name="add_todo">Add todo</string>
+    <string name="save_todo">Save todo</string>
 </resources>
