@@ -5,11 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.odensala.flitig.R
 import com.odensala.flitig.databinding.FragmentTodoBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class TodoFragment : Fragment(R.layout.fragment_todo) {
+
+    private val viewModel: TodoViewModel by viewModels()
 
     private var _binding: FragmentTodoBinding? = null
 
