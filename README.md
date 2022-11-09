@@ -6,3 +6,5 @@ Todo app with MVVM and latest Android architecture components
 - Flow
 - Room
 - Dagger Hilt
+# Planned features
+- Material 3
