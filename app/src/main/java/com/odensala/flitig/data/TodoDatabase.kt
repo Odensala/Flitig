@@ -3,7 +3,7 @@ package com.odensala.flitig.data
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
-import com.odensala.flitig.di.AppModule
+import com.odensala.flitig.di.ApplicationScope
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -15,12 +15,14 @@ abstract class TodoDatabase : RoomDatabase() {
 
     class Callback @Inject constructor(
         private val todoDao: Provider<TodoDao>,
-        @AppModule.ApplicationScope private val applicationScope: CoroutineScope
+        @ApplicationScope private val applicationScope: CoroutineScope
     ) :
         RoomDatabase.Callback() {
         override fun onCreate(db: SupportSQLiteDatabase) {
             super.onCreate(db)
+
             val dao = todoDao.get()
+
             applicationScope.launch {
                 dao.insert(Todo("Take out the trash"))
                 dao.insert(Todo("Vacuum", completed = true))

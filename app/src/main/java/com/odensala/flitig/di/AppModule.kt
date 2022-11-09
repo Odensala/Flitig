@@ -17,8 +17,11 @@ import javax.inject.Singleton
 object AppModule {
     @Provides
     @Singleton
-    fun provideDatabase(app: Application) =
+    fun provideDatabase(app: Application, callback: TodoDatabase.Callback) =
         Room.databaseBuilder(app, TodoDatabase::class.java, "todo_database")
+            .fallbackToDestructiveMigration()
+            .addCallback(callback)
+            .build()
 
     @Provides
     fun provideTodoDao(db: TodoDatabase) = db.todoDao()
@@ -27,8 +30,8 @@ object AppModule {
     @Provides
     @Singleton
     fun provideApplicationScope() = CoroutineScope(SupervisorJob())
-
-    @Retention(AnnotationRetention.RUNTIME)
-    @Qualifier
-    annotation class ApplicationScope
 }
+
+@Retention(AnnotationRetention.RUNTIME)
+@Qualifier
+annotation class ApplicationScope

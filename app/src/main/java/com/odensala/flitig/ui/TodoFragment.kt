@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.odensala.flitig.R
 import com.odensala.flitig.databinding.FragmentTodoBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -32,6 +33,18 @@ class TodoFragment : Fragment(R.layout.fragment_todo) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val todoAdapter = TodoAdapter()
+        binding.apply {
+            recyclerViewTodo.apply {
+                adapter = todoAdapter
+                layoutManager = LinearLayoutManager(requireContext())
+                setHasFixedSize(true)
+            }
+        }
+
+        viewModel.todos.observe(viewLifecycleOwner) {
+            todoAdapter.submitList(it)
+        }
     }
 
     override fun onDestroyView() {
