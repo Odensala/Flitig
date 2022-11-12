@@ -2,7 +2,8 @@
 # Flitig
 Todo app with MVVM and the latest Android architecture components.
 # Features
-- Keep track of your daily tasks with ease
+- Keep track of your daily todos with ease
+- Easily search for todos
 # Key components
 - MVVM
 - Coroutines
@@ -10,5 +11,5 @@ Todo app with MVVM and the latest Android architecture components.
 - Room
 - Dagger Hilt
 # Planned features
-- Search functionality
+- Unit tests
 - Material 3
