@@ -1,8 +1,15 @@
 <resources>
     <string name="app_name">Flitig</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--fragment_add_todo-->
     <string name="important_todo">Important todo</string>
     <string name="todo_name">Todo name</string>
     <string name="add_todo">Add todo</string>
     <string name="save_todo">Save todo</string>
+    <!--Menu-->
+    <string name="search">Search</string>
+    <string name="sort">Sort</string>
+    <string name="sort_by_name">Sort by name</string>
+    <string name="sort_by_date_created">Sort by date created</string>
+    <string name="hide_completed">Hide completed</string>
+    <string name="delete_all_completed">Delete all completed</string>
 </resources>

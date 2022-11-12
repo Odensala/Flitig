@@ -25,8 +25,8 @@ class TodoAdapter : ListAdapter<Todo, TodoAdapter.TodoViewHolder>(DiffCallback()
         fun bind(todo: Todo) {
             binding.apply {
                 checkboxCompleted.isChecked = todo.completed
-                textviewTodoTitle.text = todo.title
-                textviewTodoTitle.paint.isStrikeThruText = todo.completed
+                textviewTodoName.text = todo.name
+                textviewTodoName.paint.isStrikeThruText = todo.completed
                 imageviewImportance.isVisible = todo.important
             }
         }

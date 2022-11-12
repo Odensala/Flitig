@@ -9,7 +9,7 @@ import kotlinx.parcelize.Parcelize
 @Entity (tableName = "todo_table")
 @Parcelize
 data class Todo(
-    val title: String,
+    val name: String,
     val important: Boolean = false,
     val completed: Boolean = false,
     val created: Long = System.currentTimeMillis(),
