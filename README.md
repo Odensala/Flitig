@@ -2,7 +2,7 @@
 # Flitig
 Todo app with MVVM and the latest Android architecture components. Keep track of your daily todos with ease.
 # Features
-- Add, edit and delete todos.
+- Add, edit and delete todos
 - Easily search for todos
 # Key components
 - MVVM
