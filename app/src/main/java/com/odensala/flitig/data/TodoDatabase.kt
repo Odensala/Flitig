@@ -29,6 +29,16 @@ abstract class TodoDatabase : RoomDatabase() {
                 dao.insert(Todo("Change guitar strings", important = true))
                 dao.insert(Todo("Clean the windows"))
                 dao.insert(Todo("Call grandma"))
+                dao.insert(Todo("Buy 100 bags of chips"))
+                dao.insert(Todo("Catch a squirrel"))
+                dao.insert(Todo("Make korean BBQ"))
+                dao.insert(Todo("Find a 100 year old coin"))
+                dao.insert(Todo("Finish watching Onizuka"))
+                dao.insert(Todo("Buy 1 bitcoin"))
+                dao.insert(Todo("Buy 2 bitcoin"))
+                dao.insert(Todo("Move to Japan"))
+                dao.insert(Todo("Buy a GTR"))
+                dao.insert(Todo("Bench 80kg"))
             }
         }
     }
