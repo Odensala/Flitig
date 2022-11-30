@@ -12,5 +12,5 @@ Todo app with MVVM and the latest Android architecture components. Keep track of
 - Dagger Hilt
 - Unit tests
 - Material 3
-# Planned features
-
+# Screenshot
+<img src="https://user-images.githubusercontent.com/82329099/204761472-62b415c6-91f0-4298-99d5-af7cdd929bb1.png" width="180"/>
